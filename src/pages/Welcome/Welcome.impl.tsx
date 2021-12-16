@@ -1,9 +1,9 @@
 import React from "react";
-import logo from "assets/app/logo.svg";
 import { useTranslation } from "react-i18next";
-import { Image, Loading } from "components/atoms";
 import { StandardTemplate } from "components/templates";
 
+// import logo from "assets/app/logo.svg";
+// import { Image, Loading } from "components/atoms";
 import PageTitle from "components/atoms/PageTitle";
 import { Container, Anchor } from "./styles";
 import { WelcomeProps } from "./Welcome.interface";
@@ -13,23 +13,11 @@ const Welcome: React.FC<WelcomeProps.IProps> = () => {
 
     return (
         <StandardTemplate>
-            <PageTitle Title="Welcome - React Boilerplate" />
+            <PageTitle Title="Welcome - React Boilerplate HOME" />
             <Container className="App">
-                <Image
-                    image={logo}
-                    height="40vmin"
-                    alt="logo"
-                    styles={{
-                        animation: "App-logo-spin infinite 20s linear",
-                    }}
-                />
-                <Anchor href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-                    {ready ? (
-                        <>{t("translation:Welcome to React")}</>
-                    ) : (
-                        <Loading type="skeleton" />
-                    )}
-                </Anchor>
+                <div>
+                    Main page should go here
+                </div>
             </Container>
         </StandardTemplate>
     );

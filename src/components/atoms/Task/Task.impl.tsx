@@ -5,6 +5,7 @@ import { StarFilled, StarOutlined } from "@ant-design/icons";
 
 interface TaskInterfaceProps {
     task: { id: any; title: string; state: any; updatedAt?: Date };
+    onArchiveTask: HandlerFunction;
     onPinTask: HandlerFunction;
 }
 
