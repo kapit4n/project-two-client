@@ -1,6 +1,14 @@
 import React from "react";
 import { Loading } from "components/atoms";
-import { HomeFilled, ContactsFilled, UsergroupAddOutlined, MessageFilled, BellFilled, UserOutlined, NotificationFilled } from '@ant-design/icons';
+import {
+    HomeFilled,
+    ContactsFilled,
+    UsergroupAddOutlined,
+    MessageFilled,
+    BellFilled,
+    UserOutlined,
+    NotificationFilled,
+} from "@ant-design/icons";
 import { Alert, Button as AButton } from "antd";
 import { LanguageSelector } from "components/molecules";
 import { useTranslation } from "react-i18next";
@@ -31,22 +39,48 @@ const Header = (props: HeaderProps.IProps) => {
 
         return (
             <>
-                <div style={{ display: 'flex', justifyContent: "space-between", minWidth: '400px' }}>
-                    <AButton type="text" style={{ color: 'white' }} icon={<HomeFilled />} />
-                    <AButton type="text" style={{ color: 'white' }} icon={<ContactsFilled />} />
-                    <AButton type="text" style={{ color: 'white' }} icon={<UsergroupAddOutlined />} />
-                    <AButton type="text" style={{ color: 'white' }} icon={<MessageFilled />} />
-                    <AButton type="text" style={{ color: 'white' }} icon={<BellFilled />} />
-                    <AButton type="text" style={{ color: 'white' }} shape="circle" icon={<UserOutlined />} />
-                    <AButton type="text" style={{ color: 'white' }} icon={<NotificationFilled />} />
+                <div
+                    style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        minWidth: "400px",
+                    }}>
+                    <AButton type="text" style={{ color: "white" }} icon={<HomeFilled />} />
+                    <AButton
+                        type="text"
+                        style={{ color: "white" }}
+                        icon={<ContactsFilled />}
+                    />
+                    <AButton
+                        type="text"
+                        style={{ color: "white" }}
+                        icon={<UsergroupAddOutlined />}
+                    />
+                    <AButton
+                        type="text"
+                        style={{ color: "white" }}
+                        icon={<MessageFilled />}
+                    />
+                    <AButton type="text" style={{ color: "white" }} icon={<BellFilled />} />
+                    <AButton
+                        type="text"
+                        style={{ color: "white" }}
+                        shape="circle"
+                        icon={<UserOutlined />}
+                    />
+                    <AButton
+                        type="text"
+                        style={{ color: "white" }}
+                        icon={<NotificationFilled />}
+                    />
                 </div>
             </>
-        )
+        );
     };
 
     return (
         <Container>
-            <div style={{ display: 'flex', width: '100%', justifyContent: 'space-around' }}>
+            <div style={{ display: "flex", width: "100%", justifyContent: "space-around" }}>
                 <LanguageSelector languages={["es", "en"]} />
                 <input style={{ width: "370px" }} placeholder="Search" />
                 {RenderLoginButton()}

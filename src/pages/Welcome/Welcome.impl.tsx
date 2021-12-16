@@ -15,9 +15,7 @@ const Welcome: React.FC<WelcomeProps.IProps> = () => {
         <StandardTemplate>
             <PageTitle Title="Welcome - React Boilerplate HOME" />
             <Container className="App">
-                <div>
-                    Main page should go here
-                </div>
+                <div>Main page should go here</div>
             </Container>
         </StandardTemplate>
     );
