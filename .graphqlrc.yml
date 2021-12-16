@@ -1,0 +1,27 @@
+schema:
+  - '**/*.schema.ts'
+  # - '${REACT_APP_GRAPHQL_PROTOCOL}://${REACT_APP_GRAPHQL_HOST}:${REACT_APP_GRAPHQL_PORT}/${REACT_APP_GRAPHQL_ROUTE}'
+  
+documents: '**/*.queries.ts'
+extensions:
+  codegen:
+    generates:
+      introspection.json:
+        plugins:
+          - introspection
+        config:
+          minify: true
+      src/generated/graphql.tsx:
+        documents: '**/*.queries.ts'
+        config:
+          reactApolloVersion: 2
+          withComponent: false
+          withHOC: false
+          withHooks: true
+          withMutationFn: false
+        overwrite: true
+        plugins:
+          - typescript
+          - typescript-operations
+          - typescript-react-apollo
+    overwrite: true
