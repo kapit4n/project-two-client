@@ -1,4 +1,4 @@
-export type Language = "ko" | "en";
+export type Language = "es" | "en";
 
 export interface i18nModel {
     __typename: string;

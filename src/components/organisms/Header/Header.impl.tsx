@@ -30,7 +30,7 @@ const Header = (props: HeaderProps.IProps) => {
 
     return (
         <Container>
-            <LanguageSelector languages={["en", "kr"]} />
+            <LanguageSelector languages={["es", "en"]} />
             {RenderView()}
         </Container>
     );

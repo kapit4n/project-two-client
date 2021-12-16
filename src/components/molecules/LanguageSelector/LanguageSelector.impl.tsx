@@ -23,8 +23,8 @@ const LanguageSelector = (props: LanguageSelectorProps.IProps) => {
                 await I18nService.changeLanguage("en");
                 i18n.changeLanguage("en");
             } else if (key === "1") {
-                await I18nService.changeLanguage("ko");
-                i18n.changeLanguage("ko");
+                await I18nService.changeLanguage("es");
+                i18n.changeLanguage("es");
             }
         } catch (error) {
             console.error(error);

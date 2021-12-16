@@ -1,0 +1,9 @@
+{
+  "Welcome to React": "React",
+  "Logged In": "Iniciado",
+  "Logout": "Salir",
+  "Login": "Entrar",
+  "Sorry, you are not authorized to access this page.": "Perdon no tiene accesso a esta pagina",
+  "Sorry, something is wrong with the server.": "Perdon, algo extrano sucedio",
+  "Sorry, the page you are trying to visit does not exist.": "Perdon, no existe la pagina."
+}

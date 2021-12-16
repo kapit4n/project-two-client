@@ -1,4 +1,4 @@
 import * as en from "./en";
-import * as ko from "./ko";
+import * as es from "./es";
 
-export default { en, ko };
+export default { es, en };
