@@ -15,15 +15,19 @@ import { useTranslation } from "react-i18next";
 import { Container, HeaderItem, SearchInput } from "./styles";
 import { HeaderProps } from "./Header.interface";
 
-const HOME_PAGE = "home";
+import './styles.css'
 
-/* const currentHeaderItem: CSS.Properties = {
-    opacity: 1,
-    borderBottom: "2px solid white",
-    height: "3.8rem",
-}; */
+const HOME_PAGE = "home";
+const NOTIFICATION_PAGE = "notifications";
+const JOBS_PAGE = "jobs";
+const MESSAGING_PAGE = "messaging";
+const NETWORK_PAGE = "network";
+const ME_PAGE = "me";
+const WORK_PAGE = "work";
 
 const Header = (props: HeaderProps.IProps) => {
+
+
     const { t } = useTranslation();
     const { Login, loading, error, data, Logout } = props;
 
@@ -46,8 +50,9 @@ const Header = (props: HeaderProps.IProps) => {
                         justifyContent: "space-between",
                     }}>
                     <HeaderItem
-                        style={{ opacity: current === "home" ? "1" : "" }}
-                        onClick={() => setCurrent("home")}>
+                        onClick={() => setCurrent(HOME_PAGE)}
+                        className={current === HOME_PAGE ? 'active' : ''}
+                    >
                         <Button
                             type="text"
                             style={{ color: "white" }}
@@ -56,8 +61,8 @@ const Header = (props: HeaderProps.IProps) => {
                         <span className="item">Home</span>
                     </HeaderItem>
                     <HeaderItem
-                        style={{ opacity: current === "network" ? "1" : "" }}
-                        onClick={() => setCurrent("network")}>
+                        className={current === NETWORK_PAGE ? 'active' : ''}
+                        onClick={() => setCurrent(NETWORK_PAGE)}>
                         <Button
                             type="text"
                             style={{ color: "white" }}
@@ -66,8 +71,8 @@ const Header = (props: HeaderProps.IProps) => {
                         <span className="item">My Network</span>
                     </HeaderItem>
                     <HeaderItem
-                        style={{ opacity: current === "jobs" ? "1" : "" }}
-                        onClick={() => setCurrent("jobs")}>
+                        className={current === JOBS_PAGE ? 'active' : ''}
+                        onClick={() => setCurrent(JOBS_PAGE)}>
                         <Button
                             type="text"
                             style={{ color: "white" }}
@@ -76,8 +81,8 @@ const Header = (props: HeaderProps.IProps) => {
                         <span className="item">Jobs</span>
                     </HeaderItem>
                     <HeaderItem
-                        style={{ opacity: current === "messaging" ? "1" : "" }}
-                        onClick={() => setCurrent("messaging")}>
+                        className={current === MESSAGING_PAGE ? 'active' : ''}
+                        onClick={() => setCurrent(MESSAGING_PAGE)}>
                         <Button
                             type="text"
                             style={{ color: "white" }}
@@ -86,8 +91,8 @@ const Header = (props: HeaderProps.IProps) => {
                         <span className="item">Messaging</span>
                     </HeaderItem>
                     <HeaderItem
-                        style={{ opacity: current === "notifications" ? "1" : "" }}
-                        onClick={() => setCurrent("notifications")}>
+                        className={current === NOTIFICATION_PAGE ? 'active' : ''}
+                        onClick={() => setCurrent(NOTIFICATION_PAGE)}>
                         <Button
                             type="text"
                             style={{ color: "white" }}
@@ -96,8 +101,8 @@ const Header = (props: HeaderProps.IProps) => {
                         <span className="item">Notifications</span>
                     </HeaderItem>
                     <HeaderItem
-                        style={{ opacity: current === "me" ? "1" : "" }}
-                        onClick={() => setCurrent("me")}>
+                        className={current === ME_PAGE ? 'active' : ''}
+                        onClick={() => setCurrent(ME_PAGE)}>
                         <Button
                             type="text"
                             style={{ color: "white" }}
@@ -109,8 +114,8 @@ const Header = (props: HeaderProps.IProps) => {
                     <div style={{ border: "1px solid white", margin: "0.5rem" }} />
 
                     <HeaderItem
-                        style={{ opacity: current === "work" ? "1" : "" }}
-                        onClick={() => setCurrent("work")}>
+                        className={current === WORK_PAGE ? 'active' : ''}
+                        onClick={() => setCurrent(WORK_PAGE)}>
                         <Button
                             type="text"
                             style={{ color: "white" }}

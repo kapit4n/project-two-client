@@ -16,6 +16,7 @@
     "antd": "^4.0.3",
     "apollo3-cache-persist": "^0.8.0",
     "chalk": "^3.0.0",
+    "css-loader": "^6.5.1",
     "csstype": "^3.0.10",
     "enzyme-to-json": "^3.4.4",
     "graphql": "^14.6.0",
@@ -32,6 +33,7 @@
     "react-i18next": "^11.3.4",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0",
+    "style-loader": "^3.3.1",
     "styled-components": "^5.0.1",
     "sweetalert": "^2.1.2",
     "typescript": "^3.8.3"

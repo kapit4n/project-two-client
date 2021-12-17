@@ -49,12 +49,11 @@ export const HeaderItem = styled.div`
 
 export const SearchInput = styled.input`
     width: 370px;
-    margin-left: 1rem;re
-
+    margin-left: 1rem;
     @media (max-width: 1500px) {
         width: 300px;
     }
-    
+
     @media (max-width: 786px) {
         width: 100%;
     }
