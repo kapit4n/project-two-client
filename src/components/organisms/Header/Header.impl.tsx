@@ -1,6 +1,5 @@
 import React from "react";
 import { Loading } from "components/atoms";
-import CSS from "csstype";
 import {
     HomeFilled,
     UsergroupAddOutlined,
@@ -9,6 +8,7 @@ import {
     UserOutlined,
     AppstoreOutlined,
     ProfileFilled,
+    SearchOutlined
 } from "@ant-design/icons";
 import { Alert, Button } from "antd";
 import { useTranslation } from "react-i18next";
@@ -134,7 +134,7 @@ const Header = (props: HeaderProps.IProps) => {
                         style={{ width: 35 }}
                         alt="Logo"
                     />
-                    <SearchInput placeholder="Search" />
+                    <SearchInput addonBefore={<SearchOutlined />} placeholder="Search" />
                 </div>
                 {RenderLoginButton()}
             </div>

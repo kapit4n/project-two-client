@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Dropdown as drpdwn } from "antd";
+import { Input as ainput } from "antd";
 
 export const Container = styled.header`
     width: 100%;
@@ -47,7 +48,7 @@ export const HeaderItem = styled.div`
     }
 `;
 
-export const SearchInput = styled.input`
+export const SearchInput = styled(ainput)`
     width: 370px;
     margin-left: 1rem;
     @media (max-width: 1500px) {
