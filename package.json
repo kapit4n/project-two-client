@@ -16,6 +16,7 @@
     "antd": "^4.0.3",
     "apollo3-cache-persist": "^0.8.0",
     "chalk": "^3.0.0",
+    "csstype": "^3.0.10",
     "enzyme-to-json": "^3.4.4",
     "graphql": "^14.6.0",
     "graphql-tag": "^2.10.3",
