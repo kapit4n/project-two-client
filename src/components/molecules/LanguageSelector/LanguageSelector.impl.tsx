@@ -43,9 +43,11 @@ const LanguageSelector = (props: LanguageSelectorProps.IProps) => {
 
     return (
         <Dropdown overlay={showMenu} onVisibleChange={handleVisibleChange} visible={visible}>
-            <span>
-                <TranslationOutlined /> <DownOutlined />
-            </span>
+            <img
+                width={50}
+                alt="Logo"
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6b/Hello_Web_Series_%28Wordmark%29_Logo.png/1200px-Hello_Web_Series_%28Wordmark%29_Logo.png"
+            />
         </Dropdown>
     );
 };

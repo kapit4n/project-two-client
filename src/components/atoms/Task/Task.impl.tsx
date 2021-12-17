@@ -5,7 +5,7 @@ import { StarFilled, StarOutlined } from "@ant-design/icons";
 
 interface TaskInterfaceProps {
     task: { id: any; title: string; state: any; updatedAt?: Date };
-    // onArchiveTask: HandlerFunction;
+    onArchiveTask: HandlerFunction;
     onPinTask: HandlerFunction;
 }
 
@@ -13,6 +13,7 @@ const Task: React.FC<TaskInterfaceProps> = props => {
     const {
         task: { title, state, id },
         onPinTask,
+        onArchiveTask,
     } = props;
 
     const showByTaskStatus = () => {
@@ -20,7 +21,7 @@ const Task: React.FC<TaskInterfaceProps> = props => {
             case "TASK_PINNED":
                 return (
                     <span
-                        onClick={() => onPinTask(id)}
+                        onClick={() => onArchiveTask(id)}
                         role="button"
                         tabIndex={0}
                         onKeyDown={() => onPinTask(id)}>
