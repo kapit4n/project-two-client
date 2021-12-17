@@ -104,9 +104,7 @@ const Header = (props: HeaderProps.IProps) => {
                         />
                         <span>Me</span>
                     </div>
-                    <div style={{ border: '1px solid white', margin: '0.5rem' }}>
-
-                    </div>
+                    <div style={{ border: "1px solid white", margin: "0.5rem" }} />
 
                     <div style={buttonCSS}>
                         <AButton
@@ -124,10 +122,10 @@ const Header = (props: HeaderProps.IProps) => {
     return (
         <Container>
             <div style={{ display: "flex", width: "100%", justifyContent: "space-around" }}>
-                <div style={{ padding: '0.7rem', display: 'flex' }}>
+                <div style={{ padding: "0.7rem", display: "flex" }}>
                     <LanguageSelector languages={["es", "en"]} />
                 </div>
-                <div style={{ padding: '0.7rem', display: 'flex' }}>
+                <div style={{ padding: "0.7rem", display: "flex" }}>
                     <input style={{ width: "370px" }} placeholder="Search" />
                 </div>
                 {RenderLoginButton()}
