@@ -29,14 +29,16 @@ export const HeaderItem = styled.div`
     .item {
         color: white;
     }
-    @media (max-width: 768px) {
-        .item {
-            display: none;
-        }
-    }
     @media (max-width: 1500px) {
+        padding: 0 1rem;
         .item {
             font-size: 10px;
+        }
+    }
+    @media (max-width: 768px) {
+        padding: 0 0.2rem;
+        .item {
+            display: none;
         }
     }
     &:hover {
@@ -47,15 +49,17 @@ export const HeaderItem = styled.div`
 
 export const SearchInput = styled.input`
     width: 370px;
-    @media (max-width: 786px) {
-        width: 200px;
-    }
-
-    @media (max-width: 500px) {
-        width: 50px;
-    }
+    margin-left: 1rem;re
 
     @media (max-width: 1500px) {
         width: 300px;
+    }
+    
+    @media (max-width: 786px) {
+        width: 100%;
+    }
+
+    @media (max-width: 500px) {
+        width: 5rem;
     }
 `;

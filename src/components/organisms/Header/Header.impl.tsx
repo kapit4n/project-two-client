@@ -44,7 +44,6 @@ const Header = (props: HeaderProps.IProps) => {
                     style={{
                         display: "flex",
                         justifyContent: "space-between",
-                        minWidth: "500px",
                     }}>
                     <HeaderItem
                         style={{ opacity: current === "home" ? "1" : "" }}
@@ -130,11 +129,9 @@ const Header = (props: HeaderProps.IProps) => {
                 <div style={{ padding: "0.7rem", display: "flex" }}>
                     <img
                         src="https://www.shareicon.net/data/256x256/2016/08/01/640324_logo_512x512.png"
-                        style={{ width: 50 }}
+                        style={{ width: 35 }}
                         alt="Logo"
                     />
-                </div>
-                <div style={{ padding: "0.7rem", display: "flex" }}>
                     <SearchInput placeholder="Search" />
                 </div>
                 {RenderLoginButton()}
