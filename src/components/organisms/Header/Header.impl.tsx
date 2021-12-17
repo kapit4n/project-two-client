@@ -3,7 +3,6 @@ import { Loading } from "components/atoms";
 import CSS from "csstype";
 import {
     HomeFilled,
-    ContactsFilled,
     UsergroupAddOutlined,
     MessageFilled,
     BellFilled,
@@ -11,22 +10,24 @@ import {
     AppstoreOutlined,
     ProfileFilled,
 } from "@ant-design/icons";
-import { Alert, Button as AButton } from "antd";
-import { LanguageSelector } from "components/molecules";
+import { Alert, Button } from "antd";
 import { useTranslation } from "react-i18next";
-import { Container } from "./styles";
+import { Container, HeaderItem, SearchInput } from "./styles";
 import { HeaderProps } from "./Header.interface";
 
-const buttonCSS: CSS.Properties = {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-};
+const HOME_PAGE = "home";
+
+/* const currentHeaderItem: CSS.Properties = {
+    opacity: 1,
+    borderBottom: "2px solid white",
+    height: "3.8rem",
+}; */
 
 const Header = (props: HeaderProps.IProps) => {
     const { t } = useTranslation();
     const { Login, loading, error, data, Logout } = props;
+
+    const [current, setCurrent] = React.useState(HOME_PAGE);
 
     const RenderLoginButton = () => {
         if (loading) {
@@ -37,16 +38,6 @@ const Header = (props: HeaderProps.IProps) => {
             return <Alert message={error.message} type="error" showIcon />;
         }
 
-        /* 
-        if (data && data.localUser.isLoggedIn) {
-            return <LoggedIn Logout={Logout} />;
-        }
-
-        return (
-            <Button styles={{ alignSelf: "flex-end" }} Text={t("Login")} onClick={Login} />
-        ); 
-        */
-
         return (
             <>
                 <div
@@ -55,65 +46,79 @@ const Header = (props: HeaderProps.IProps) => {
                         justifyContent: "space-between",
                         minWidth: "500px",
                     }}>
-                    <div style={buttonCSS}>
-                        <AButton
+                    <HeaderItem
+                        style={{ opacity: current === "home" ? "1" : "" }}
+                        onClick={() => setCurrent("home")}>
+                        <Button
                             type="text"
                             style={{ color: "white" }}
                             icon={<HomeFilled />}
                         />
-                        <span>Home</span>
-                    </div>
-                    <div style={buttonCSS}>
-                        <AButton
+                        <span className="item">Home</span>
+                    </HeaderItem>
+                    <HeaderItem
+                        style={{ opacity: current === "network" ? "1" : "" }}
+                        onClick={() => setCurrent("network")}>
+                        <Button
                             type="text"
                             style={{ color: "white" }}
                             icon={<UsergroupAddOutlined />}
                         />
-                        <span>My Network</span>
-                    </div>
-                    <div style={buttonCSS}>
-                        <AButton
+                        <span className="item">My Network</span>
+                    </HeaderItem>
+                    <HeaderItem
+                        style={{ opacity: current === "jobs" ? "1" : "" }}
+                        onClick={() => setCurrent("jobs")}>
+                        <Button
                             type="text"
                             style={{ color: "white" }}
                             icon={<ProfileFilled />}
                         />
-                        <span>Jobs</span>
-                    </div>
-                    <div style={buttonCSS}>
-                        <AButton
+                        <span className="item">Jobs</span>
+                    </HeaderItem>
+                    <HeaderItem
+                        style={{ opacity: current === "messaging" ? "1" : "" }}
+                        onClick={() => setCurrent("messaging")}>
+                        <Button
                             type="text"
                             style={{ color: "white" }}
                             icon={<MessageFilled />}
                         />
-                        <span>Messaging</span>
-                    </div>
-                    <div style={buttonCSS}>
-                        <AButton
+                        <span className="item">Messaging</span>
+                    </HeaderItem>
+                    <HeaderItem
+                        style={{ opacity: current === "notifications" ? "1" : "" }}
+                        onClick={() => setCurrent("notifications")}>
+                        <Button
                             type="text"
                             style={{ color: "white" }}
                             icon={<BellFilled />}
                         />
-                        <span>Notifications</span>
-                    </div>
-                    <div style={{ display: "flex", flexDirection: "column" }}>
-                        <AButton
+                        <span className="item">Notifications</span>
+                    </HeaderItem>
+                    <HeaderItem
+                        style={{ opacity: current === "me" ? "1" : "" }}
+                        onClick={() => setCurrent("me")}>
+                        <Button
                             type="text"
                             style={{ color: "white" }}
                             shape="circle"
                             icon={<UserOutlined />}
                         />
-                        <span>Me</span>
-                    </div>
+                        <span className="item">Me</span>
+                    </HeaderItem>
                     <div style={{ border: "1px solid white", margin: "0.5rem" }} />
 
-                    <div style={buttonCSS}>
-                        <AButton
+                    <HeaderItem
+                        style={{ opacity: current === "work" ? "1" : "" }}
+                        onClick={() => setCurrent("work")}>
+                        <Button
                             type="text"
                             style={{ color: "white" }}
                             icon={<AppstoreOutlined />}
                         />
-                        <span>Work</span>
-                    </div>
+                        <span className="item">Work</span>
+                    </HeaderItem>
                 </div>
             </>
         );
@@ -123,10 +128,14 @@ const Header = (props: HeaderProps.IProps) => {
         <Container>
             <div style={{ display: "flex", width: "100%", justifyContent: "space-around" }}>
                 <div style={{ padding: "0.7rem", display: "flex" }}>
-                    <LanguageSelector languages={["es", "en"]} />
+                    <img
+                        src="https://www.shareicon.net/data/256x256/2016/08/01/640324_logo_512x512.png"
+                        style={{ width: 50 }}
+                        alt="Logo"
+                    />
                 </div>
                 <div style={{ padding: "0.7rem", display: "flex" }}>
-                    <input style={{ width: "370px" }} placeholder="Search" />
+                    <SearchInput placeholder="Search" />
                 </div>
                 {RenderLoginButton()}
             </div>
