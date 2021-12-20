@@ -12,7 +12,7 @@ import {
 } from "@ant-design/icons";
 import { Alert, Button } from "antd";
 import { useTranslation } from "react-i18next";
-import { Container, HeaderItem, SearchInput } from "./styles";
+import { Container, HeaderItem, SearchIcon, SearchInput } from "./styles";
 import { HeaderProps } from "./Header.interface";
 
 import "./styles.css";
@@ -31,7 +31,7 @@ const Header = (props: HeaderProps.IProps) => {
 
     const [current, setCurrent] = React.useState(HOME_PAGE);
 
-    const RenderLoginButton = () => {
+    const RenderRightLinks = () => {
         if (loading) {
             return <Loading LoadingText="Loading..." />;
         }
@@ -49,7 +49,7 @@ const Header = (props: HeaderProps.IProps) => {
                     }}>
                     <HeaderItem
                         onClick={() => setCurrent(HOME_PAGE)}
-                        className={current === HOME_PAGE ? "active" : ""}>
+                        className={current === HOME_PAGE ? "active" : "not-active"}>
                         <Button
                             type="text"
                             style={{ color: "white" }}
@@ -58,7 +58,7 @@ const Header = (props: HeaderProps.IProps) => {
                         <span className="item">Home</span>
                     </HeaderItem>
                     <HeaderItem
-                        className={current === NETWORK_PAGE ? "active" : ""}
+                        className={current === NETWORK_PAGE ? "active"  : "not-active"}
                         onClick={() => setCurrent(NETWORK_PAGE)}>
                         <Button
                             type="text"
@@ -68,7 +68,7 @@ const Header = (props: HeaderProps.IProps) => {
                         <span className="item">My Network</span>
                     </HeaderItem>
                     <HeaderItem
-                        className={current === JOBS_PAGE ? "active" : ""}
+                        className={current === JOBS_PAGE ? "active"  : "not-active"}
                         onClick={() => setCurrent(JOBS_PAGE)}>
                         <Button
                             type="text"
@@ -78,7 +78,7 @@ const Header = (props: HeaderProps.IProps) => {
                         <span className="item">Jobs</span>
                     </HeaderItem>
                     <HeaderItem
-                        className={current === MESSAGING_PAGE ? "active" : ""}
+                        className={current === MESSAGING_PAGE ? "active"  : "not-active"}
                         onClick={() => setCurrent(MESSAGING_PAGE)}>
                         <Button
                             type="text"
@@ -88,7 +88,7 @@ const Header = (props: HeaderProps.IProps) => {
                         <span className="item">Messaging</span>
                     </HeaderItem>
                     <HeaderItem
-                        className={current === NOTIFICATION_PAGE ? "active" : ""}
+                        className={current === NOTIFICATION_PAGE ? "active"  : "not-active"}
                         onClick={() => setCurrent(NOTIFICATION_PAGE)}>
                         <Button
                             type="text"
@@ -98,7 +98,7 @@ const Header = (props: HeaderProps.IProps) => {
                         <span className="item">Notifications</span>
                     </HeaderItem>
                     <HeaderItem
-                        className={current === ME_PAGE ? "active" : ""}
+                        className={current === ME_PAGE ? "active"  : "not-active"}
                         onClick={() => setCurrent(ME_PAGE)}>
                         <Button
                             type="text"
@@ -108,10 +108,10 @@ const Header = (props: HeaderProps.IProps) => {
                         />
                         <span className="item">Me</span>
                     </HeaderItem>
-                    <div style={{ border: "1px solid white", margin: "0.5rem" }} />
+                    <div style={{ border: "1px solid white", margin: "0.5rem", height: '3rem' }} />
 
                     <HeaderItem
-                        className={current === WORK_PAGE ? "active" : ""}
+                        className={current === WORK_PAGE ? "active"  : "not-active"}
                         onClick={() => setCurrent(WORK_PAGE)}>
                         <Button
                             type="text"
@@ -128,15 +128,16 @@ const Header = (props: HeaderProps.IProps) => {
     return (
         <Container>
             <div style={{ display: "flex", width: "100%", justifyContent: "space-around" }}>
-                <div style={{ padding: "0.7rem", display: "flex" }}>
+                <div style={{ display: "flex", justifyContent: "center", alignContent: 'center', alignItems: "center" }}>
                     <img
                         src="https://www.shareicon.net/data/256x256/2016/08/01/640324_logo_512x512.png"
-                        style={{ width: 35 }}
+                        style={{ width: '2rem', height: '2rem', }}
                         alt="Logo"
                     />
-                    <SearchInput addonBefore={<SearchOutlined />} placeholder="Search" />
+                    <SearchInput placeholder="Search" />
+                    <SearchIcon />
                 </div>
-                {RenderLoginButton()}
+                {RenderRightLinks()}
             </div>
         </Container>
     );

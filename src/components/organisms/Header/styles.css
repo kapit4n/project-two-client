@@ -1,5 +1,17 @@
 .active {
   opacity: 1;
   border-bottom: 2px solid white;
-  height: 3.8rem;
+  height: 3.5rem;
+  opacity: 1;
+}
+
+.not-active {
+    opacity: 1;
+    border-bottom: 2px;
+    height: 3.8rem;
+    opacity: 0.5;
+}
+
+.not-active:hover {
+  opacity: 1;
 }

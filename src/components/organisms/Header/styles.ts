@@ -1,9 +1,12 @@
 import styled from "styled-components";
 import { Dropdown as drpdwn, Input as ainput } from "antd";
+import {
+    SearchOutlined
+} from "@ant-design/icons";
 
 export const Container = styled.header`
     width: 100%;
-    height: 50px;
+    height: 3.5rem;
     padding: 10px;
     background-color: #0b192e;
     color: #fff;
@@ -26,13 +29,18 @@ export const HeaderItem = styled.div`
     padding: 0 1rem;
     opacity: 0.5;
 
+    .ant-btn-icon-only {
+        height: 20px;
+    }
+
     .item {
         color: white;
+        font-size: 12px;
     }
     @media (max-width: 1500px) {
         padding: 0 1rem;
         .item {
-            font-size: 10px;
+            font-size: 12px;
         }
     }
     @media (max-width: 768px) {
@@ -47,7 +55,7 @@ export const HeaderItem = styled.div`
     }
 `;
 
-export const SearchInput = styled(ainput)`
+export const SearchInput = styled(ainput.Search)`
     width: 370px;
     margin-left: 1rem;
     @media (max-width: 1500px) {
@@ -59,6 +67,20 @@ export const SearchInput = styled(ainput)`
     }
 
     @media (max-width: 500px) {
-        width: 5rem;
+        display: none;
     }
 `;
+
+export const SearchIcon = styled(SearchOutlined)`
+    font-size: 16px;
+    color: #08c;
+    margin-left: 1rem;
+    &:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
+
+    @media (min-width: 500px) {
+        display: none;
+    }
+`
