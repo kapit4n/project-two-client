@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { Dropdown as drpdwn, Input as ainput } from "antd";
-import {
-    SearchOutlined
-} from "@ant-design/icons";
+import { SearchOutlined } from "@ant-design/icons";
 
 export const Container = styled.header`
     width: 100%;
@@ -83,4 +81,4 @@ export const SearchIcon = styled(SearchOutlined)`
     @media (min-width: 500px) {
         display: none;
     }
-`
+`;

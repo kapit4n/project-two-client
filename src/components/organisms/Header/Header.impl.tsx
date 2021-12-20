@@ -58,7 +58,7 @@ const Header = (props: HeaderProps.IProps) => {
                         <span className="item">Home</span>
                     </HeaderItem>
                     <HeaderItem
-                        className={current === NETWORK_PAGE ? "active"  : "not-active"}
+                        className={current === NETWORK_PAGE ? "active" : "not-active"}
                         onClick={() => setCurrent(NETWORK_PAGE)}>
                         <Button
                             type="text"
@@ -68,7 +68,7 @@ const Header = (props: HeaderProps.IProps) => {
                         <span className="item">My Network</span>
                     </HeaderItem>
                     <HeaderItem
-                        className={current === JOBS_PAGE ? "active"  : "not-active"}
+                        className={current === JOBS_PAGE ? "active" : "not-active"}
                         onClick={() => setCurrent(JOBS_PAGE)}>
                         <Button
                             type="text"
@@ -78,7 +78,7 @@ const Header = (props: HeaderProps.IProps) => {
                         <span className="item">Jobs</span>
                     </HeaderItem>
                     <HeaderItem
-                        className={current === MESSAGING_PAGE ? "active"  : "not-active"}
+                        className={current === MESSAGING_PAGE ? "active" : "not-active"}
                         onClick={() => setCurrent(MESSAGING_PAGE)}>
                         <Button
                             type="text"
@@ -88,7 +88,7 @@ const Header = (props: HeaderProps.IProps) => {
                         <span className="item">Messaging</span>
                     </HeaderItem>
                     <HeaderItem
-                        className={current === NOTIFICATION_PAGE ? "active"  : "not-active"}
+                        className={current === NOTIFICATION_PAGE ? "active" : "not-active"}
                         onClick={() => setCurrent(NOTIFICATION_PAGE)}>
                         <Button
                             type="text"
@@ -98,7 +98,7 @@ const Header = (props: HeaderProps.IProps) => {
                         <span className="item">Notifications</span>
                     </HeaderItem>
                     <HeaderItem
-                        className={current === ME_PAGE ? "active"  : "not-active"}
+                        className={current === ME_PAGE ? "active" : "not-active"}
                         onClick={() => setCurrent(ME_PAGE)}>
                         <Button
                             type="text"
@@ -108,10 +108,16 @@ const Header = (props: HeaderProps.IProps) => {
                         />
                         <span className="item">Me</span>
                     </HeaderItem>
-                    <div style={{ border: "1px solid white", margin: "0.5rem", height: '3rem' }} />
+                    <div
+                        style={{
+                            border: "1px solid white",
+                            margin: "0.5rem",
+                            height: "3rem",
+                        }}
+                    />
 
                     <HeaderItem
-                        className={current === WORK_PAGE ? "active"  : "not-active"}
+                        className={current === WORK_PAGE ? "active" : "not-active"}
                         onClick={() => setCurrent(WORK_PAGE)}>
                         <Button
                             type="text"
@@ -128,10 +134,16 @@ const Header = (props: HeaderProps.IProps) => {
     return (
         <Container>
             <div style={{ display: "flex", width: "100%", justifyContent: "space-around" }}>
-                <div style={{ display: "flex", justifyContent: "center", alignContent: 'center', alignItems: "center" }}>
+                <div
+                    style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignContent: "center",
+                        alignItems: "center",
+                    }}>
                     <img
                         src="https://www.shareicon.net/data/256x256/2016/08/01/640324_logo_512x512.png"
-                        style={{ width: '2rem', height: '2rem', }}
+                        style={{ width: "2rem", height: "2rem" }}
                         alt="Logo"
                     />
                     <SearchInput placeholder="Search" />
