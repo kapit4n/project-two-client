@@ -8,7 +8,7 @@ import {
     UserOutlined,
     AppstoreOutlined,
     ProfileFilled,
-    SearchOutlined
+    SearchOutlined,
 } from "@ant-design/icons";
 import { Alert, Button } from "antd";
 import { useTranslation } from "react-i18next";

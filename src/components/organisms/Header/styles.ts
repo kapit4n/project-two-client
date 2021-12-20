@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { Dropdown as drpdwn } from "antd";
-import { Input as ainput } from "antd";
+import { Dropdown as drpdwn, Input as ainput } from "antd";
 
 export const Container = styled.header`
     width: 100%;
