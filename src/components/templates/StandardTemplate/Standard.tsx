@@ -1,10 +1,10 @@
 import React from "react";
-import { Header, ProfileInfo } from "components/organisms";
+import { Header, ProfileInfo, StartPost } from "components/organisms";
 
 import { useQuery } from "@apollo/client";
 import { getLocalUser } from "apollo/Operations/Client/Queries";
 import { AuthService } from "services";
-import { Container, Body } from "./styles";
+import { Container } from "./styles";
 
 const StandardTemplate: React.FC = (props: any) => {
     const { children } = props;
@@ -46,7 +46,11 @@ const StandardTemplate: React.FC = (props: any) => {
                     }}>
                     <ProfileInfo />
                 </div>
-                <div style={{ width: "60%" }}>Center</div>
+                <div style={{ width: "60%", margin: "1rem", padding: '1rem',
+                        background: "black",
+                        height: "100vh", }}>
+                <StartPost />
+                </div>
                 <div style={{ width: "20%" }}>Right</div>
             </div>
         </Container>
