@@ -1,5 +1,5 @@
 import React from "react";
-import { Header } from "components/organisms";
+import { Header, ProfileInfo } from "components/organisms";
 
 import { useQuery } from "@apollo/client";
 import { getLocalUser } from "apollo/Operations/Client/Queries";
@@ -36,7 +36,19 @@ const StandardTemplate: React.FC = (props: any) => {
                 error={error}
                 data={data}
             />
-            <Body>{children}</Body>
+            <div style={{ color: "white", display: "flex" }}>
+                <div
+                    style={{
+                        width: "20%",
+                        margin: "1rem",
+                        background: "black",
+                        height: "100vh",
+                    }}>
+                    <ProfileInfo />
+                </div>
+                <div style={{ width: "60%" }}>Center</div>
+                <div style={{ width: "20%" }}>Right</div>
+            </div>
         </Container>
     );
 };
