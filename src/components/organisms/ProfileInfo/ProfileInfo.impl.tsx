@@ -39,7 +39,7 @@ const ProfileInfo = () => {
                     flexDirection: "column",
                 }}>
                 <h2 style={{ color: "white" }}>Luis Arce</h2>
-                <p  style={{color: '#d2d7d9'}}>Remote Full Stack Developer</p>
+                <p style={{ color: "#d2d7d9" }}>Remote Full Stack Developer</p>
             </div>
         </div>
     );
