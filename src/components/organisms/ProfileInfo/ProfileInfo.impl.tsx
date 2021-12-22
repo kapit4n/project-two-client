@@ -2,8 +2,8 @@ import React from "react";
 
 const ProfileInfo = () => {
     return (
-        <div>
-            <div style={{ width: "100%", height: "4rem", overflow: "hidden" }}>
+        <div style={{borderRadius: "10px 10px 10px"}}>
+            <div style={{ width: "100%", height: "4rem", overflow: "hidden", borderRadius: "10px 10px 10px", }}>
                 <img
                     src="https://m.media-amazon.com/images/I/616H3dU+VKL._AC_SX466_.jpg"
                     width="100%"

@@ -56,6 +56,12 @@ export const HeaderItem = styled.div`
 export const SearchInput = styled(ainput.Search)`
     width: 370px;
     margin-left: 1rem;
+
+    input {
+        height: 2rem;
+        padding: 0 1rem;
+    }
+
     @media (max-width: 1500px) {
         width: 300px;
     }

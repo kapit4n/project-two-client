@@ -132,7 +132,7 @@ const Header = (props: HeaderProps.IProps) => {
     };
 
     return (
-        <Container>
+        <div style={{width: '100%', position: 'fixed', background: 'black', display: 'flex', top: 0, left: 0, zIndex: 999}}>
             <div style={{ display: "flex", width: "100%", justifyContent: "space-around" }}>
                 <div
                     style={{
@@ -151,7 +151,7 @@ const Header = (props: HeaderProps.IProps) => {
                 </div>
                 {RenderRightLinks()}
             </div>
-        </Container>
+        </div>
     );
 };
 
