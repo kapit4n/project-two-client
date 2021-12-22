@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, ProfileInfo, StartPost } from "components/organisms";
+import { Header, ProfileInfo, StartPost, AddToFeed } from "components/organisms";
 
 import { useQuery } from "@apollo/client";
 import { getLocalUser } from "apollo/Operations/Client/Queries";
@@ -40,18 +40,29 @@ const StandardTemplate: React.FC = (props: any) => {
                 <div
                     style={{
                         width: "20%",
-                        margin: "1rem",
+                        margin: "1rem 1rem 1rem 0",
                         background: "black",
                         height: "100vh",
                     }}>
                     <ProfileInfo />
                 </div>
-                <div style={{ width: "60%", margin: "1rem", padding: '1rem',
+                <div
+                    style={{
+                        width: "52%",
+                        margin: "1rem",
+                        padding: "1rem",
+                        background: "black",
+                        height: "100vh",
+                    }}>
+                    <StartPost />
+                </div>
+                <div style={{ width: "28%",
+                        margin: "1rem 0 1rem 1rem",
+                        padding: "1rem",
                         background: "black",
                         height: "100vh", }}>
-                <StartPost />
+                    <AddToFeed />
                 </div>
-                <div style={{ width: "20%" }}>Right</div>
             </div>
         </Container>
     );

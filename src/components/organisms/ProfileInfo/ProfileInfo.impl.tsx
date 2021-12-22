@@ -18,13 +18,13 @@ const ProfileInfo = () => {
                     width: "100%",
                     display: "flex",
                     justifyContent: "center",
-                    height: "3rem",
+                    height: "4rem",
                     background: "none",
                     borderRadius: "2px 4px 2px",
                 }}>
                 <img
                     src="https://pbs.twimg.com/profile_images/1129397696425410560/_ACzzX6p_400x400.jpg"
-                    style={{ borderRadius: "50%", width: "3rem" }}
+                    style={{ borderRadius: "50%", width: "4rem" }}
                     alt="User"
                 />
             </div>
@@ -39,7 +39,7 @@ const ProfileInfo = () => {
                     flexDirection: "column",
                 }}>
                 <h2 style={{ color: "white" }}>Luis Arce</h2>
-                <div>Remote Full Stack Developer</div>
+                <p  style={{color: '#d2d7d9'}}>Remote Full Stack Developer</p>
             </div>
         </div>
     );
