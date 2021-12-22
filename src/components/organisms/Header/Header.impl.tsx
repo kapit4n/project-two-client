@@ -8,11 +8,11 @@ import {
     UserOutlined,
     AppstoreOutlined,
     ProfileFilled,
-    SearchOutlined,
 } from "@ant-design/icons";
+
 import { Alert, Button } from "antd";
 import { useTranslation } from "react-i18next";
-import { Container, HeaderItem, SearchIcon, SearchInput } from "./styles";
+import { HeaderItem, SearchIcon, SearchInput } from "./styles";
 import { HeaderProps } from "./Header.interface";
 
 import "./styles.css";
@@ -132,7 +132,16 @@ const Header = (props: HeaderProps.IProps) => {
     };
 
     return (
-        <div style={{width: '100%', position: 'fixed', background: 'black', display: 'flex', top: 0, left: 0, zIndex: 999}}>
+        <div
+            style={{
+                width: "100%",
+                position: "fixed",
+                background: "black",
+                display: "flex",
+                top: 0,
+                left: 0,
+                zIndex: 999,
+            }}>
             <div style={{ display: "flex", width: "100%", justifyContent: "space-around" }}>
                 <div
                     style={{

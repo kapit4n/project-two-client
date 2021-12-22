@@ -36,14 +36,14 @@ const StandardTemplate: React.FC = (props: any) => {
                 error={error}
                 data={data}
             />
-            <div style={{ color: "white", display: "flex", marginTop: '4rem' }}>
+            <div style={{ color: "white", display: "flex", marginTop: "4rem" }}>
                 <div
                     style={{
                         width: "20%",
                         margin: "1rem 1rem 1rem 0",
                         background: "black",
                         height: "100vh",
-                        borderRadius: "10px 10px 10px"
+                        borderRadius: "10px 10px 10px",
                     }}>
                     <ProfileInfo />
                 </div>
@@ -54,7 +54,7 @@ const StandardTemplate: React.FC = (props: any) => {
                         padding: "1rem",
                         background: "black",
                         height: "100vh",
-                        borderRadius: "10px 10px 10px"
+                        borderRadius: "10px 10px 10px",
                     }}>
                     <StartPost />
                 </div>
@@ -65,7 +65,7 @@ const StandardTemplate: React.FC = (props: any) => {
                         padding: "1rem",
                         background: "black",
                         height: "100vh",
-                        borderRadius: "10px 10px 10px"
+                        borderRadius: "10px 10px 10px",
                     }}>
                     <AddToFeed />
                 </div>
