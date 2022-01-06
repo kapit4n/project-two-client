@@ -44,8 +44,27 @@ const StandardTemplate: React.FC = (props: any) => {
                         background: "black",
                         height: "100vh",
                         borderRadius: "10px 10px 10px",
+                        border: '1px solid #898a8c',
                     }}>
                     <ProfileInfo />
+                    <hr style={{borderColor: '#898a8c'}}/>
+                    <div style={{display: 'flex', justifyContent: 'space-between', padding: '0 1rem'}}>
+                        <span>
+                            Who viewed your profile
+                        </span>
+                        <span>
+                            170
+                        </span>
+                    </div>
+                    <div style={{display: 'flex', justifyContent: 'space-between', padding: '0 1rem'}}>
+                        <span>
+                            Views of your post
+                        </span>
+                        <span>
+                            216
+                        </span>
+                    </div>
+                    <hr style={{borderColor: '#898a8c'}}/>
                 </div>
                 <div
                     style={{
@@ -55,6 +74,7 @@ const StandardTemplate: React.FC = (props: any) => {
                         background: "black",
                         height: "100vh",
                         borderRadius: "10px 10px 10px",
+                        border: '1px solid #898a8c'
                     }}>
                     <StartPost />
                 </div>
@@ -66,6 +86,7 @@ const StandardTemplate: React.FC = (props: any) => {
                         background: "black",
                         height: "100vh",
                         borderRadius: "10px 10px 10px",
+                        border: '1px solid #898a8c'
                     }}>
                     <AddToFeed />
                 </div>
