@@ -1,4 +1,4 @@
-<img src="https://i.ibb.co/wCr7NNT/react-apollo.png" style="text-align:center"/>
+![Dashboard](https://github.com/kapit4n/project-two-client/blob/master/screenshots/home.png)
 
 # React Boilerplate with Typescript and Apollo Client
 
