@@ -1,6 +1,7 @@
+# Linkedin close app
+
 ![Dashboard](https://github.com/kapit4n/project-two-client/blob/master/screenshots/home.png)
 
-# React Boilerplate with Typescript and Apollo Client
 
 A React-typescript configuration template for projects using apollo client as their state management with a connection to a Graphql server.
 
