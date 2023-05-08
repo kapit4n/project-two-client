@@ -31,12 +31,12 @@ const Header = (props: HeaderProps.IProps) => {
     const { Login, loading, error, data, Logout } = props;
     const history = useHistory();
     const location = useLocation();
+    const [current, setCurrent] = React.useState(HOME_PAGE);
 
     React.useEffect(() => {
         setCurrent(location?.pathname.replace("/", ""));
     }, [location]);
 
-    const [current, setCurrent] = React.useState(HOME_PAGE);
 
     const redirectTo = (path: string) => {
         history.push(`/${path}`);

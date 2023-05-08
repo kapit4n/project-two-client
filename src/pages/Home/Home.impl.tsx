@@ -5,14 +5,14 @@ import { StandardTemplate } from "components/templates";
 import PageTitle from "components/atoms/PageTitle";
 import { AddToFeed, ProfileInfo, StartPost } from "components/organisms";
 import { Container, Anchor } from "./styles";
-import { WelcomeProps } from "./Welcome.interface";
+import { HomeProps } from "./Home.interface";
 
-const Welcome: React.FC<WelcomeProps.IProps> = () => {
+const Home: React.FC<HomeProps.IProps> = () => {
     const { t, ready } = useTranslation();
 
     return (
         <StandardTemplate>
-            <PageTitle Title="Welcome - React Boilerplate HOME" />
+            <PageTitle Title="Home - React Boilerplate HOME" />
             <Container>
                 <div
                     style={{
@@ -74,4 +74,4 @@ const Welcome: React.FC<WelcomeProps.IProps> = () => {
     );
 };
 
-export default Welcome;
+export default Home;

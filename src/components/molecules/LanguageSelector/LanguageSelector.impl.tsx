@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Menu, Dropdown } from "antd";
-import { DownOutlined, TranslationOutlined } from "@ant-design/icons";
 import { useTranslation } from "react-i18next";
 import { I18nService } from "services";
 import { LanguageSelectorProps } from "./LanguageSelector.interface";
@@ -27,6 +26,7 @@ const LanguageSelector = (props: LanguageSelectorProps.IProps) => {
                 i18n.changeLanguage("es");
             }
         } catch (error) {
+            // ignore
             console.error(error);
         }
     };

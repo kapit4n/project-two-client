@@ -21,6 +21,7 @@ export const updateLanguage = async (language: Language) => {
         if (error instanceof ApolloError) {
             throw new Error(error.message);
         } else {
+            // ignore console error
             console.error(error);
         }
     }

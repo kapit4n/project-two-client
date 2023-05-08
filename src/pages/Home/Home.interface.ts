@@ -1,3 +1,3 @@
-export namespace WelcomeProps {
+export namespace HomeProps {
     export interface IProps {}
 }
