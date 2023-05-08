@@ -16,6 +16,8 @@
     "antd": "^4.0.3",
     "apollo3-cache-persist": "^0.8.0",
     "chalk": "^3.0.0",
+    "cheerio": "^1.0.0-rc.12",
+    "cheerio-select": "^2.1.0",
     "css-loader": "^6.5.1",
     "csstype": "^3.0.10",
     "enzyme-to-json": "^3.4.4",
@@ -36,7 +38,7 @@
     "style-loader": "^3.3.1",
     "styled-components": "^5.0.1",
     "sweetalert": "^2.1.2",
-    "typescript": "^3.8.3"
+    "typescript": "^5.0.4"
   },
   "scripts": {
     "start": "react-scripts start",

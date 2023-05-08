@@ -1,5 +1,6 @@
 import { getApolloClient } from "apollo";
 import { getLocalUser } from "apollo/Operations/Client/Queries";
+import { ApolloError } from "@apollo/client/errors";
 
 export const updateLocalUser = async (isLoggedIn: boolean) => {
     try {
@@ -15,6 +16,10 @@ export const updateLocalUser = async (isLoggedIn: boolean) => {
             },
         });
     } catch (error) {
-        throw new Error(error.message);
+        if (error instanceof ApolloError) {
+            throw new Error(error.message);
+        } else {
+            console.error(error)
+        }
     }
 };

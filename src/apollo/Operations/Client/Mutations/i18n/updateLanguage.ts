@@ -1,3 +1,4 @@
+import { ApolloError } from "@apollo/client/errors";
 import { getApolloClient } from "apollo";
 import { Language } from "apollo/Models";
 import { getLanguage } from "apollo/Operations/Client/Queries";
@@ -16,6 +17,11 @@ export const updateLanguage = async (language: Language) => {
             },
         });
     } catch (error) {
-        throw new Error(error.message);
+        // TODO review how to fix error throwing
+        if (error instanceof ApolloError) {
+            throw new Error(error.message);
+        } else {
+            console.error(error)
+        }
     }
 };
