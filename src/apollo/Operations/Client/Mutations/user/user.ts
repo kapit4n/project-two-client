@@ -19,7 +19,7 @@ export const updateLocalUser = async (isLoggedIn: boolean) => {
         if (error instanceof ApolloError) {
             throw new Error(error.message);
         } else {
-            console.error(error)
+            console.error(error);
         }
     }
 };
