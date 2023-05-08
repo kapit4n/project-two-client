@@ -2,7 +2,15 @@ import React from "react";
 import loadable from "@loadable/component";
 import { LoadingContainer } from "./styles";
 
-export const Welcome = loadable(() => import("pages/Welcome"), {
+export const Home = loadable(() => import("pages/Welcome"), {
+    fallback: (
+        <LoadingContainer>
+            <span>Loading...</span>
+        </LoadingContainer>
+    ),
+});
+
+export const MyNetwork = loadable(() => import("pages/MyNetwork"), {
     fallback: (
         <LoadingContainer>
             <span>Loading...</span>

@@ -12,6 +12,7 @@ import {
 
 import { Alert, Button } from "antd";
 import { useTranslation } from "react-i18next";
+import { useLocation, useHistory } from "react-router-dom";
 import { HeaderItem, SearchIcon, SearchInput } from "./styles";
 import { HeaderProps } from "./Header.interface";
 
@@ -21,15 +22,25 @@ const HOME_PAGE = "home";
 const NOTIFICATION_PAGE = "notifications";
 const JOBS_PAGE = "jobs";
 const MESSAGING_PAGE = "messaging";
-const NETWORK_PAGE = "network";
+const NETWORK_PAGE = "mynetwork";
 const ME_PAGE = "me";
 const WORK_PAGE = "work";
 
 const Header = (props: HeaderProps.IProps) => {
     const { t } = useTranslation();
     const { Login, loading, error, data, Logout } = props;
+    const history = useHistory();
+    const location = useLocation();
+
+    React.useEffect(() => {
+        setCurrent(location?.pathname.replace("/", ""));
+    }, [location]);
 
     const [current, setCurrent] = React.useState(HOME_PAGE);
+
+    const redirectTo = (path: string) => {
+        history.push(`/${path}`);
+    };
 
     const RenderRightLinks = () => {
         if (loading) {
@@ -48,7 +59,7 @@ const Header = (props: HeaderProps.IProps) => {
                         justifyContent: "space-between",
                     }}>
                     <HeaderItem
-                        onClick={() => setCurrent(HOME_PAGE)}
+                        onClick={() => redirectTo(HOME_PAGE)}
                         className={current === HOME_PAGE ? "active" : "not-active"}>
                         <Button
                             type="text"
@@ -59,7 +70,7 @@ const Header = (props: HeaderProps.IProps) => {
                     </HeaderItem>
                     <HeaderItem
                         className={current === NETWORK_PAGE ? "active" : "not-active"}
-                        onClick={() => setCurrent(NETWORK_PAGE)}>
+                        onClick={() => redirectTo(NETWORK_PAGE)}>
                         <Button
                             type="text"
                             style={{ color: "white" }}
@@ -69,7 +80,7 @@ const Header = (props: HeaderProps.IProps) => {
                     </HeaderItem>
                     <HeaderItem
                         className={current === JOBS_PAGE ? "active" : "not-active"}
-                        onClick={() => setCurrent(JOBS_PAGE)}>
+                        onClick={() => redirectTo(JOBS_PAGE)}>
                         <Button
                             type="text"
                             style={{ color: "white" }}
@@ -79,7 +90,7 @@ const Header = (props: HeaderProps.IProps) => {
                     </HeaderItem>
                     <HeaderItem
                         className={current === MESSAGING_PAGE ? "active" : "not-active"}
-                        onClick={() => setCurrent(MESSAGING_PAGE)}>
+                        onClick={() => redirectTo(MESSAGING_PAGE)}>
                         <Button
                             type="text"
                             style={{ color: "white" }}
@@ -89,7 +100,7 @@ const Header = (props: HeaderProps.IProps) => {
                     </HeaderItem>
                     <HeaderItem
                         className={current === NOTIFICATION_PAGE ? "active" : "not-active"}
-                        onClick={() => setCurrent(NOTIFICATION_PAGE)}>
+                        onClick={() => redirectTo(NOTIFICATION_PAGE)}>
                         <Button
                             type="text"
                             style={{ color: "white" }}
@@ -99,7 +110,7 @@ const Header = (props: HeaderProps.IProps) => {
                     </HeaderItem>
                     <HeaderItem
                         className={current === ME_PAGE ? "active" : "not-active"}
-                        onClick={() => setCurrent(ME_PAGE)}>
+                        onClick={() => redirectTo(ME_PAGE)}>
                         <Button
                             type="text"
                             style={{ color: "white" }}

@@ -2,13 +2,15 @@ import React from "react";
 import { Switch, Route, Redirect, RouteComponentProps } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import theme from "styles/theme";
-import { ErrorPage, Welcome } from "./loadable";
+import { ErrorPage, Home, MyNetwork } from "./loadable";
 
 const App = () => {
     return (
         <ThemeProvider theme={theme}>
             <Switch>
-                <Route exact path="/" component={Welcome} />
+                <Route exact path="/" component={Home} />
+                <Route exact path="/home" component={Home} />
+                <Route exact path="/mynetwork" component={MyNetwork} />
                 <Route
                     exact
                     path="/NotFound"
