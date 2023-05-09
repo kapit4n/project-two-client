@@ -40,8 +40,9 @@ export const MainSidebar = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    height: 100vh;
+    height: max-content;
     width: 52%;
+    
 `;
 
 export const RightSidebar = styled.div`
