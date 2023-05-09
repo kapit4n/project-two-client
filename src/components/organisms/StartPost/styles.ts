@@ -12,9 +12,6 @@ export const StartPostInput = styled(Input.TextArea)`
     margin: 0.4rem;
     height: 3rem;
     padding: 1rem;
-    &:hover {
-        cursor: pointer;
-    }
 `;
 
 export const StartPostAvatar = styled.img`

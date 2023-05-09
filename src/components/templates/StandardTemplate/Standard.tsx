@@ -36,7 +36,7 @@ const StandardTemplate: React.FC = (props: any) => {
                 error={error}
                 data={data}
             />
-            <div style={{ color: "white", display: "flex", marginTop: "4rem" }}>
+            <div className="main-container">
                 {children}
             </div>
         </Container>

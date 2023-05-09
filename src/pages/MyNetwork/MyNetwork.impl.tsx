@@ -17,6 +17,7 @@ import {
 import { MyNetworkProps } from "./MyNetwork.interface";
 
 const MyNetwork: React.FC<MyNetworkProps.IProps> = () => {
+    // eslint-disable-next-line
     const { t, ready } = useTranslation();
 
     const networkUsers = [

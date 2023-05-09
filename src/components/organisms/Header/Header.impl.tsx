@@ -27,7 +27,9 @@ const ME_PAGE = "me";
 const WORK_PAGE = "work";
 
 const Header = (props: HeaderProps.IProps) => {
+    // eslint-disable-next-line
     const { t } = useTranslation();
+    // eslint-disable-next-line
     const { Login, loading, error, data, Logout } = props;
     const history = useHistory();
     const location = useLocation();

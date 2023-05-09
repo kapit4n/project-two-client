@@ -4,12 +4,13 @@ import { StandardTemplate } from "components/templates";
 
 import PageTitle from "components/atoms/PageTitle";
 import { AddToFeed, ProfileInfo, StartPost, PostList } from "components/organisms";
-import { Container } from "./styles";
+import { Container, LeftSidebar, MainSidebar, RightSidebar } from "./styles";
 import { HomeProps } from "./Home.interface";
 
 const Home: React.FC<HomeProps.IProps> = () => {
+    // eslint-disable-next-line
     const { t, ready } = useTranslation();
-    const [posts, setPosts] = React.useState<string[]>([])
+    const [posts, setPosts] = React.useState<string[]>(["Hello its me"])
 
     const onSubmitPost = (post: string) => {
         setPosts([post, ...posts])
@@ -19,62 +20,26 @@ const Home: React.FC<HomeProps.IProps> = () => {
         <StandardTemplate>
             <PageTitle Title="Home - React Boilerplate HOME" />
             <Container>
-                <div
-                    style={{
-                        width: "20%",
-                        margin: "1rem 1rem 1rem 0",
-                        background: "black",
-                        height: "100vh",
-                        borderRadius: "10px 10px 10px",
-                        border: "1px solid #898a8c",
-                    }}>
+                <LeftSidebar>
                     <ProfileInfo />
-                    <hr style={{ borderColor: "#898a8c" }} />
-                    <div
-                        style={{
-                            display: "flex",
-                            justifyContent: "space-between",
-                            padding: "0 1rem",
-                        }}>
+                    <hr />
+                    <div className="views-on-profile" >
                         <span>Who viewed your profile</span>
                         <span>170</span>
                     </div>
-                    <div
-                        style={{
-                            display: "flex",
-                            justifyContent: "space-between",
-                            padding: "0 1rem",
-                        }}>
+                    <div className="views-on-posts">
                         <span>Views of your post</span>
                         <span>216</span>
                     </div>
-                    <hr style={{ borderColor: "#898a8c" }} />
-                </div>
-                <div
-                    style={{
-                        width: "52%",
-                        margin: "1rem",
-                        padding: "1rem",
-                        background: "black",
-                        height: "100vh",
-                        borderRadius: "10px 10px 10px",
-                        border: "1px solid #898a8c",
-                    }}>
+                    <hr />
+                </LeftSidebar>
+                <MainSidebar>
                     <StartPost onSubmitPost={onSubmitPost} />
                     <PostList posts={posts} />
-                </div>
-                <div
-                    style={{
-                        width: "28%",
-                        margin: "1rem 0 1rem 1rem",
-                        padding: "1rem",
-                        background: "black",
-                        height: "100vh",
-                        borderRadius: "10px 10px 10px",
-                        border: "1px solid #898a8c",
-                    }}>
+                </MainSidebar>
+                <RightSidebar>
                     <AddToFeed />
-                </div>
+                </RightSidebar>
             </Container>
         </StandardTemplate>
     );

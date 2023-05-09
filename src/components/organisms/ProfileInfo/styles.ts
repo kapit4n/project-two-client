@@ -30,6 +30,7 @@ export const Avatar = styled.img`
 
 export const InfoContainer = styled.div`
     margin-top: 3rem;
+    padding: 0 1rem;
     width: 100%;
     display: flex;
     align-items: center;
