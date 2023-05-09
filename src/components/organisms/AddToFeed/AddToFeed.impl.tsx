@@ -2,7 +2,7 @@ import React from "react";
 
 import { Container, InfoContainer } from "./styles";
 
-const StartPost = () => {
+const AddToFeed = () => {
     return (
         <Container>
             <h4>Add to your feed</h4>
@@ -22,4 +22,4 @@ const StartPost = () => {
     );
 };
 
-export default StartPost;
+export default AddToFeed;

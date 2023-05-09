@@ -5,7 +5,8 @@ export const Container = styled.div`
   flex-direction: column;
 
   h4 {
-    color: "white", marginBottom: "1rem"
+    color: white;
+    margin-bottom: 1rem;
   }
 `;
 

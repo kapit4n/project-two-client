@@ -3,12 +3,17 @@ import { useTranslation } from "react-i18next";
 import { StandardTemplate } from "components/templates";
 
 import PageTitle from "components/atoms/PageTitle";
-import { AddToFeed, ProfileInfo, StartPost } from "components/organisms";
-import { Container, Anchor } from "./styles";
+import { AddToFeed, ProfileInfo, StartPost, PostList } from "components/organisms";
+import { Container } from "./styles";
 import { HomeProps } from "./Home.interface";
 
 const Home: React.FC<HomeProps.IProps> = () => {
     const { t, ready } = useTranslation();
+    const [posts, setPosts] = React.useState<string[]>([])
+
+    const onSubmitPost = (post: string) => {
+        setPosts([post, ...posts])
+    }
 
     return (
         <StandardTemplate>
@@ -55,7 +60,8 @@ const Home: React.FC<HomeProps.IProps> = () => {
                         borderRadius: "10px 10px 10px",
                         border: "1px solid #898a8c",
                     }}>
-                    <StartPost />
+                    <StartPost onSubmitPost={onSubmitPost} />
+                    <PostList posts={posts} />
                 </div>
                 <div
                     style={{

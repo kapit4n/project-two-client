@@ -1,10 +1,12 @@
 import styled from "styled-components";
+import { Input, Button } from 'antd'
 
 export const Container = styled.div`
     display: flex;
+    align-items: center;
 `;
 
-export const StartPostInput = styled.input`
+export const StartPostInput = styled(Input.TextArea)`
     width: 100%;
     border-radius: 15px 15px;
     margin: 0.4rem;
@@ -21,3 +23,7 @@ export const StartPostAvatar = styled.img`
     height: 2.5rem;
     margin-top: 0.5rem;
 `;
+
+export const SendButton = styled(Button)`
+    
+`
